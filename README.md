@@ -17,7 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src="https://github.com/Drashtipatel296/clock_app/assets/143180636/c8be0f74-f3ca-47bc-996c-302542670f1e" height=25%, width=32%>
 <img src="https://github.com/Drashtipatel296/clock_app/assets/143180636/a6e27b90-c922-4d4f-97d1-610892b0cdd7" height=25%, width=32%>
-<img src="https://github.com/Drashtipatel296/clock_app/assets/143180636/043494ce-4c5f-465d-af11-7ede7698be77" height=25%, width=32%>
 
 
 
@@ -27,6 +26,5 @@ https://github.com/Drashtipatel296/clock_app/assets/143180636/7818b534-5a14-40b2
 
 https://github.com/Drashtipatel296/clock_app/assets/143180636/47c240bb-f2c0-4377-8b55-13dd622c74e1
 
-https://github.com/Drashtipatel296/clock_app/assets/143180636/931e989d-3b35-4745-88c7-49c2becded72
 
 
