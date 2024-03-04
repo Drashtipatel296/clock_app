@@ -20,24 +20,28 @@ class _ClockAppState extends State<analogclock> {
       });
     });
 
+    List<String> daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black87,
           title: const Text(
             'Analog Clock',
-            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),
+            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.white),
           ),
+          actions: [
+            Icon(Icons.more_vert,color: Colors.white,size: 30,),
+          ],
           centerTitle: true,
         ),
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/bg5.jpeg'), fit: BoxFit.cover),
-          ),
+          color: Colors.black87,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -50,12 +54,12 @@ class _ClockAppState extends State<analogclock> {
                       image: AssetImage('assets/clock2.png'),
                     ),
                     shape: BoxShape.circle,
-                    //border: Border.all(width: 3),
                     boxShadow: [
                       BoxShadow(
                         blurRadius: 12,
-                        color: Colors.white,
+                        color: Colors.lightBlue,
                         spreadRadius: 0.5,
+                        offset: Offset(3, 0),
                       ),
                     ],
                   ),
@@ -107,18 +111,51 @@ class _ClockAppState extends State<analogclock> {
                   ),
                 ),
               ),
-              const SizedBox(height: 70),
+              const SizedBox(height: 50),
               Text(
                 '${dateTime.hour % 12} : ${dateTime.minute} : ${dateTime.second}',
                 style: const TextStyle(
-                    fontSize: 60,
+                    fontSize: 50,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
+              Text('India Time',style: TextStyle(color: Colors.white,fontSize: 20),),
+              Text('${daysOfWeek[dateTime.weekday - 1]}, ${dateTime.day} ${_getMonth(dateTime.month)}',style: TextStyle(color: Colors.white,fontSize: 28),),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+String _getMonth(int month) {
+  switch (month) {
+    case 1:
+      return 'Jan';
+    case 2:
+      return 'Feb';
+    case 3:
+      return 'Mar';
+    case 4:
+      return 'Apr';
+    case 5:
+      return 'May';
+    case 6:
+      return 'Jun';
+    case 7:
+      return 'Jul';
+    case 8:
+      return 'Aug';
+    case 9:
+      return 'Sep';
+    case 10:
+      return 'Oct';
+    case 11:
+      return 'Nov';
+    case 12:
+      return 'Dec';
+    default:
+      return '';
   }
 }

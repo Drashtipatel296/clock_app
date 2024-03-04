@@ -18,16 +18,17 @@ class _StopWatchState extends State<StopWatch> {
     super.initState();
     timer = Timer.periodic(
         const Duration(milliseconds: 30), _updateElapsedTime);
+    setState(() {
+
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff160F30),
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        elevation: 5,
-        shadowColor: Colors.grey,
-        backgroundColor: const Color(0xff160F30),
+        backgroundColor: Colors.black87,
         title: const Text(
           'Stopwatch',
           style: TextStyle(
@@ -57,7 +58,7 @@ class _StopWatchState extends State<StopWatch> {
               width: 320,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: const Color(0xff2B1E57), width: 12),
+                border: Border.all(color: Colors.white, width: 3),
               ),
               alignment: Alignment.center,
               child: Text(
@@ -77,11 +78,11 @@ class _StopWatchState extends State<StopWatch> {
             children: [
               ElevatedButton(
                 style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  )
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    )
                 ),
                 onPressed: () {
                   setState(() {
